@@ -11,13 +11,27 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+}
+
+.logo-heading {
+    display: flex;
+    margin: 10px;
+}
+
+.logo-heading img {
+    width: fit-content;
+    height: auto;
+}
+
+.logo-heading h1 {
+    margin-left: 10px;
 }
 
 header {
@@ -53,4 +67,84 @@ a {
     z-index: -1;
     bottom: 1px;
     right: 1px;
+}
+
+.program-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border: 1px solid red;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.our-program {
+    margin: auto;
+}
+
+.container {
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+}
+
+.background-span {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 20%; /* Adjust as needed */
+    width: 500px; /* Equal width and height to create a perfect circle */
+    height: 500px; /* Equal width and height to create a perfect circle */
+    background-color: var(--secondary-color); /* Set background color */
+    border-radius: 50%; /* Create a perfect circle */
+    z-index: -1; /* Position behind the image */
+}
+
+.circle-containers {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 60%;
+    left: 30%;
+}
+
+.circle-abstract {
+    border: 5px solid var(--secondary-color-dark);
+    margin: 10px;
+    width: 50%;
+    height: auto;
+}
+
+@media (min-width: 600px) {
+    .background-span {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .background-span {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .background-span {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .background-span {
+        width: 500px;
+        height: 500px;
+    }
 }
