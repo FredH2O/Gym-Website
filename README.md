@@ -1,3 +1,3 @@
 # gym
 
-gym design project Frederico
+gym design project by Frederico
