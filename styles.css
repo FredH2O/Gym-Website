@@ -17,8 +17,26 @@
     font-style: normal;
 }
 
+.span-effect {
+    position: absolute;
+    box-shadow: 0 0 1000px 100px var(--secondary-color);
+    z-index: -1;
+    bottom: 5%;
+    left: 10%;
+}
+
 img {
     width: 100%;
+}
+
+h2 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5rem;
+    word-spacing: 2.5px;
 }
 
 .main-container {
@@ -27,18 +45,12 @@ img {
     padding: 5rem 0.5rem;
 }
 
-article::before {
-    content: "TRAINING";
-    position: absolute;
-    top: 75%;
-    left: 20%;
-    font-size: 10rem;
-    font-weight: 700;
-    line-height: 7rem;
+body {
+    background-color: var(--primary-color);
     color: var(--white);
-    opacity: 0.04;
-    z-index: -1;
 }
+
+/* header,nav and logo styling here */
 
 .nav-logo-heading {
     display: flex;
@@ -65,18 +77,18 @@ article::before {
     z-index: 1;
 }
 
-nav>ul {
+nav > ul {
     display: flex;
 }
 
-.nav-ul>li {
+.nav-ul > li {
     margin: 10px;
     padding: 10px;
     border-radius: 50px;
     list-style-type: none;
 }
 
-.nav-ul>li:hover {
+.nav-ul > li:hover {
     background-color: var(--secondary-color);
     transform: translateY(-10%);
     transition: 1s;
@@ -85,9 +97,9 @@ nav>ul {
 a {
     text-decoration: none;
     color: white;
-        position: relative;
-        padding-bottom: 0.75rem;
-        color: var(--white);
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--white);
 }
 
 a::after {
@@ -96,42 +108,34 @@ a::after {
     height: 2px;
     width: 0;
     left: 0;
-    bottom: 0;
-    background-color: var(--secondary-color);
-    transition: 0.5s;
+    bottom: 5px;
+    background-color: var(--secondary-color-dark);
+    transition: 0.2s;
 }
 
 a:hover::after {
-    width: 70%;
+    width: 50%;
 }
 
-body {
-    background-color: rgb(32, 39, 39);
-    color: white;
-}
+/* article styling starts here */
 
-.span-effect {
+article::before {
+    content: "TRAINING";
     position: absolute;
-    box-shadow: 0 0 1000px 100px var(--secondary-color);
+    top: 85%;
+    left: 23%;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 7rem;
+    color: var(--white);
+    opacity: 0.04;
     z-index: -1;
-    bottom: 5%;
-    left: 10%;
 }
 
 .program-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-}
-
-h2 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.5rem;
-    word-spacing: 2.5px;
 }
 
 .our-program {
@@ -141,13 +145,11 @@ p {
 .container {
     position: relative;
     width: 100%;
-    /* Adjust width as needed */
     height: auto;
-    /* Adjust height as needed */
 }
 
 .container img {
-    width: 80%;
+    width: 100%;
 }
 
 .background-span {
@@ -177,6 +179,91 @@ p {
     height: auto;
     border-radius: 50%;
 }
+
+/* explore styling starts here */
+
+.explore__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.explore__nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.explore__nav span {
+    padding: 0 3px;
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore__nav span:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.explore__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.explore__card {
+    padding: 1rem;
+    background-color: var(--primary-color-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.explore__card:hover {
+    background-color: var(--primary-color-extra-light);
+    border-color: var(--secondary-color);
+    transform: translateY(-5%);
+    transition: 1s;
+}
+
+.explore__card span {
+    display: inline-block;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--white);
+    background-color: var(--secondary-color-dark);
+    border-radius: 5px;
+}
+
+.explore__card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.explore__card p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.explore__card a {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.explore__card a:hover {
+    color: var(--secondary-color);
+}
+
+/* -------------------------------------------- */
 
 @media (min-width: 600px) {
     .background-span {
