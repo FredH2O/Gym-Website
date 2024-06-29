@@ -543,10 +543,16 @@ article::before {
 /* -------------------------------------------- */
 /* responsive design */
 /* Mobile devices (max-width: 600px) */
+<<<<<<< HEAD
 @media (max-width: 425px) {
     h2 {
         font-size: 2rem;
         border: 1px solid blue;
+=======
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2rem;
+>>>>>>> 63a47cf46e7677396f67ba419981d24172809456
     }
 
     p {
@@ -621,11 +627,19 @@ article::before {
     }
 
     .pricing-plan-div {
+<<<<<<< HEAD
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .modern-div {
         grid-template-columns: 1fr;
+=======
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modern-div {
+        grid-template-columns: 1fr 1fr;
+>>>>>>> 63a47cf46e7677396f67ba419981d24172809456
     }
 
     .footer__container {
