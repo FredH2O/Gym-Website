@@ -1,4 +1,10 @@
 // javascript here
+
+function showForm() {
+  let formContainer = document.querySelector(".form-container");
+  formContainer.classList.toggle("hidden");
+}
+
 const reviewers = [
   {
     name: "Fiona Hughes",

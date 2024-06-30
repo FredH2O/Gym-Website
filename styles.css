@@ -27,6 +27,7 @@
 
 img {
   width: 100%;
+  display: flex;
 }
 
 h2 {
@@ -42,7 +43,7 @@ p {
 .main-container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 0.5rem;
+  padding: 2.5rem 0.5rem;
 }
 
 body {
@@ -357,7 +358,6 @@ article::before {
 
 .membership-btn {
   margin-top: 20px;
-  /* Add some space between the <ul> and the button */
   margin-bottom: 10px;
   padding: 15px 15px;
   background-color: var(--secondary-color-dark);
@@ -366,24 +366,82 @@ article::before {
   border-radius: 5px;
   cursor: pointer;
   align-self: center;
-  /* Center the button horizontally */
   font-size: 1.1rem;
 }
 
 .membership-btn:hover {
   background-color: var(--secondary-color-dark);
   transform: translateY(-10%) scale(1.05);
-  /* Lift and slightly increase size */
   box-shadow: 0 8px 10px rgb(0, 255, 76);
-  /* Add a shadow to enhance the lift effect */
   transition: 0.5s ease-in;
 }
 
-/* footer styling starts here */
+/* styling for the form elements */
+
+.form-container.hidden {
+  display: none;
+}
+
+.form-container {
+  display: block;
+  max-width: 500px;
+  background-color: var(--primary-color-extra-light);
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--white);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* footer styling starts here and review styling */
 
 .review {
   background-color: var(--primary-color-light);
-  border: 1px solid red;
   overflow: hidden;
   height: 50vh;
 }
@@ -437,7 +495,13 @@ article::before {
   padding: 0;
   gap: 1rem;
   height: auto;
-  border: 1px solid blue;
+}
+
+.ri-star-fill,
+.ri-star-line,
+.ri-star-half-line {
+  font-size: 1.5rem;
+  margin: 0.2rem;
 }
 
 .review__member img {
@@ -448,7 +512,6 @@ article::before {
 }
 
 .review__member__details {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -545,16 +608,34 @@ article::before {
 /* Mobile devices (max-width: 600px) */
 @media (max-width: 425px) {
   h2 {
-    font-size: 2rem;
-    border: 1px solid blue;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .program-container {
     grid-template-columns: 1fr;
+  }
+
+  .explore__container {
+    text-align: center;
   }
 
   .explore__header {
@@ -568,6 +649,9 @@ article::before {
 
   .pricing-plan-div {
     grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 10px 0 10px 0;
+    text-align: center;
   }
 
   .modern-div {
@@ -603,7 +687,7 @@ article::before {
 }
 
 /* Tablet devices (max-width: 992px) */
-@media (max-width: 992px) {
+@media (min-width: 426px) and (max-width: 992px) {
   h2 {
     font-size: 3rem;
   }
@@ -649,81 +733,5 @@ article::before {
     font-size: 8rem;
     top: 80%;
     left: 15%;
-  }
-}
-
-/* Small desktop devices (min-width: 992px and max-width: 1200px) */
-@media (min-width: 992px) and (max-width: 1200px) {
-  .program-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .explore__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .pricing-plan-div {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .modern-div {
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .footer__container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .nav-container {
-    flex-direction: row;
-  }
-
-  .background-span {
-    width: 400px;
-    height: 400px;
-  }
-
-  article::before {
-    font-size: 9rem;
-    top: 85%;
-    left: 20%;
-  }
-}
-
-/* Large desktop devices (min-width: 1200px) */
-@media (min-width: 1200px) {
-  .program-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .explore__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .pricing-plan-div {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .modern-div {
-    grid-template-columns: 1fr 2fr 1fr;
-  }
-
-  .footer__container {
-    grid-template-columns: 400px repeat(3, 1fr);
-  }
-
-  .nav-container {
-    flex-direction: row;
-  }
-
-  .background-span {
-    width: 500px;
-    height: 500px;
-  }
-
-  article::before {
-    font-size: 10rem;
-    top: 85%;
-    left: 23%;
   }
 }
