@@ -1,8 +1,12 @@
 // javascript here
+let formContainer = document.querySelector(".form-container");
 
 function showForm() {
-  let formContainer = document.querySelector(".form-container");
   formContainer.classList.toggle("hidden");
+}
+
+function closeForm() {
+  formContainer.classList.add("hidden");
 }
 
 const reviewers = [

@@ -391,6 +391,28 @@ article::before {
   border-radius: 8px;
   box-shadow: 0 0 10px var(--secondary-color);
   font-size: 1.2rem;
+  position: fixed;
+  top: 10%;
+  right: 40%;
+  z-index: 2;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  color: red;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: var(--white);
+}
+
+#closeBtn:hover {
+  cursor: pointer;
+  background-color: #1f2125;
+  transition: 0.4s ease;
+  transform: translateY(5%);
 }
 
 .form-container h2 {
