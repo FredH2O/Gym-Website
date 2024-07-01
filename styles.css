@@ -627,11 +627,24 @@ input[type="submit"]:hover {
 
 /* -------------------------------------------- */
 /* responsive design */
-/* Mobile devices (max-width: 600px) */
 @media (max-width: 425px) {
   h2 {
     font-size: 2.2rem;
     text-align: center;
+  }
+
+  .circle-containers {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .circle-abstract {
+    border: 2px solid var(--secondary-color-dark);
+    margin: 5px;
+    width: 10%;
+    height: auto;
+    border-radius: 10px;
   }
 
   nav ul {
@@ -676,6 +689,20 @@ input[type="submit"]:hover {
     text-align: center;
   }
 
+  .form-container {
+    display: absolute;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--primary-color-extra-light);
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--secondary-color);
+    font-size: 1.2rem;
+    z-index: 2;
+    right: 1px;
+  }
+
   .modern-div {
     grid-template-columns: 1fr;
   }
@@ -703,8 +730,8 @@ input[type="submit"]:hover {
 
   article::before {
     font-size: 5rem;
-    top: 75%;
-    left: 10%;
+    top: 46%;
+    left: 4%;
   }
 }
 
@@ -720,6 +747,20 @@ input[type="submit"]:hover {
 
   .program-container {
     grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    display: absolute;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--primary-color-extra-light);
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--secondary-color);
+    font-size: 1.2rem;
+    z-index: 2;
+    right: 15%;
   }
 
   .explore__grid {
