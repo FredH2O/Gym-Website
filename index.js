@@ -1,4 +1,4 @@
-// javascript here
+// open form and close form
 let formContainer = document.querySelector(".form-container");
 
 function showForm() {
@@ -89,7 +89,21 @@ const reviewers = [
   },
 ];
 
-// make the review random
+// protein calculator
+//For men: BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age (years) + 5
+//For women: BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age (years) - 161
+
+let genderElem = document.getElementById("gender");
+let heightElem = document.getElementById("height");
+let weightElem = document.getElementById("weight");
+let ageElem = document.getElementById("age");
+
+function proteinCalculator() {
+  let men = 10 * weightElem + 6.25 * heightElem - 5 * ageElem + 5;
+  let women = 10 * weightElem + 6.25 * heightElem - 5 * ageElem - 161;
+}
+
+// make the review randomized
 
 function autoReview() {
   let reviewContent = document.querySelector(".review__content");
