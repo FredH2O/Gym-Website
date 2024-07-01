@@ -322,17 +322,17 @@
 
       <section>
         <div class="main-container">
-          <form>
-            <h2>Protein Calculator</h2>
+          <form class="form-protein">
+            <h2 class="h2-protein">Protein Calculator</h2>
 
-            <label for="gender">Gender</label>
+            <label for="gender" class="protein-label">Gender</label>
             <select name="gender" id="gender" required>
               <option value="">Select gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
 
-            <label for="age">Age</label>
+            <label for="age" class="protein-label">Age</label>
             <input
               name="age"
               type="number"
@@ -343,7 +343,7 @@
               required
             />
 
-            <label for="weight">Weight (kg)</label>
+            <label for="weight" class="protein-label">Weight (kg)</label>
             <input
               name="weight"
               type="number"
@@ -353,7 +353,7 @@
               required
             />
 
-            <label for="height">Height (cm)</label>
+            <label for="height" class="protein-label">Height (cm)</label>
             <input
               name="height"
               type="number"
@@ -363,7 +363,7 @@
               required
             />
 
-            <label for="activity">Activity Level</label>
+            <label for="activity" class="protein-label">Activity Level</label>
             <select name="activity" id="activity">
               <option value="">Select Activity Level</option>
               <option value="1.2">Sedentary (no exercise)</option>
@@ -375,7 +375,9 @@
 
             <br /><br />
 
-            <button type="submit">Calculate</button>
+            <button type="button" onclick="proteinCalculator()">
+              Calculate
+            </button>
 
             <p id="result"></p>
           </form>
