@@ -137,7 +137,9 @@ function proteinCalculator() {
       throw new Error("Invalid activity");
   }
 
-  resultElem.innerHTML = ` Your BMR is ${BMR} and TDEE is ${TDEE},
+  resultElem.innerHTML = ` Your BMR is ${BMR.toFixed(
+    2
+  )} and TDEE is ${TDEE.toFixed(2)},
   minimum protein needed is ${minimumProtein}
   maximum protein needed is ${maximumProtein}`;
 }
