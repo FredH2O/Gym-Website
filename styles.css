@@ -460,6 +460,70 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+/* protein calculator form style */
+
+.form-protein {
+  display: flex;
+  flex-direction: column;
+}
+
+.h2-protein {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.protein-label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="number"] {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  background-color: white;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e7f3fe;
+  border: 1px solid #b6d4fe;
+  border-radius: 4px;
+  color: #084298;
+  font-weight: bold;
+}
+
 /* footer styling starts here and review styling */
 
 .review {

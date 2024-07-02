@@ -1,6 +1,5 @@
 // open form and close form
-let formContainer = document.querySelector(".form-container");
-
+//let formContainer = document.querySelector(".form-container");
 function showForm() {
   formContainer.classList.toggle("hidden");
 }
@@ -93,14 +92,54 @@ const reviewers = [
 //For men: BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age (years) + 5
 //For women: BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age (years) - 161
 
-let genderElem = document.getElementById("gender");
-let heightElem = document.getElementById("height");
-let weightElem = document.getElementById("weight");
-let ageElem = document.getElementById("age");
-
 function proteinCalculator() {
-  let men = 10 * weightElem + 6.25 * heightElem - 5 * ageElem + 5;
-  let women = 10 * weightElem + 6.25 * heightElem - 5 * ageElem - 161;
+  let genderElem = document.getElementById("gender").value;
+  let heightElem = parseFloat(document.getElementById("height").value);
+  let weightElem = parseFloat(document.getElementById("weight").value);
+  let ageElem = parseFloat(document.getElementById("age").value);
+  let activityElem = parseFloat(document.getElementById("activity").value);
+  let resultElem = document.getElementById("result");
+  let BMR;
+  let TDEE;
+  let minimumProtein;
+  let maximumProtein;
+
+  if (genderElem == "male") {
+    BMR = 88.362 + 13.397 * weightElem + 4.799 * heightElem - 5.677 * ageElem;
+  } else {
+    BMR = 447.593 + 9.247 * weightElem + 3.098 * heightElem - 4.33 * ageElem;
+  }
+
+  TDEE = BMR * activityElem;
+
+  switch (activityElem) {
+    case 1.2:
+      minimumProtein = weightElem * 0.8;
+      maximumProtein = weightElem * 1.2;
+      break;
+    case 1.375:
+      minimumProtein = weightElem * 0.8;
+      maximumProtein = weightElem * 1.2;
+      break;
+    case 1.55:
+      minimumProtein = weightElem * 1.2;
+      maximumProtein = weightElem * 1.7;
+      break;
+    case 1.725:
+      minimumProtein = weightElem * 1.6;
+      maximumProtein = weightElem * 2.2;
+      break;
+    case 1.9:
+      minimumProtein = weightElem * 1.8;
+      maximumProtein = weightElem * 2.5;
+      break;
+    default:
+      throw new Error("Invalid activity");
+  }
+
+  resultElem.innerHTML = ` Your BMR is ${BMR} and TDEE is ${TDEE},
+  minimum protein needed is ${minimumProtein}
+  maximum protein needed is ${maximumProtein}`;
 }
 
 // make the review randomized
