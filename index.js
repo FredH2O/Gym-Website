@@ -1,6 +1,5 @@
 // open form and close form
-let formContainer = document.querySelector(".form-container");
-
+//let formContainer = document.querySelector(".form-container");
 function showForm() {
   formContainer.classList.toggle("hidden");
 }
