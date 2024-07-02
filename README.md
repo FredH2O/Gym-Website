@@ -1,11 +1,6 @@
 # Gym-Website
-Certainly! Here's the updated version of your GitHub `README.md` with the bullet points formatted correctly so they can be copy-pasted directly:
 
----
-
-# Gym Website
-
-Welcome to the Gym Website project! This repository contains the code for a simple and beginner-friendly gym website. This website provides information about the gym, its facilities, membership plans, class schedules, and contact details.
+Welcome to the Gym-Website project! This repository contains the code for a simple and beginner-friendly gym website. This website provides information about the gym, its facilities, membership plans, class programs, and protein calculator etc.
 
 ## Table of Contents
 - [Features](#features)
