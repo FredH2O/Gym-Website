@@ -14,10 +14,8 @@ Welcome to the Gym-Website project! This repository contains the code for a simp
 ## Features
 - **Home Page:** An overview of the gym and its mission.
 - **About Us:** Information about the gym's history and staff.
-- **Services:** Details of the gym's facilities and services.
+- **Program:** Details of the gym's facilities and services.
 - **Membership:** Information about membership plans and pricing.
-- **Classes:** Schedule of available fitness classes.
-- **Contact:** Contact form for inquiries and location map.
 
 ## Technologies Used
 - **HTML**
