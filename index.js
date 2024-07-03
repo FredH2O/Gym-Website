@@ -1,5 +1,6 @@
 // open form and close form
-//let formContainer = document.querySelector(".form-container");
+
+let formContainer = document.querySelector(".form-container");
 function showForm() {
   formContainer.classList.toggle("hidden");
 }
@@ -89,8 +90,6 @@ const reviewers = [
 ];
 
 // protein calculator
-//For men: BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age (years) + 5
-//For women: BMR = 10 × weight (kg) + 6.25 × height (cm) - 5 × age (years) - 161
 
 function proteinCalculator() {
   let genderElem = document.getElementById("gender").value;
@@ -103,6 +102,34 @@ function proteinCalculator() {
   let TDEE;
   let minimumProtein;
   let maximumProtein;
+
+  if (!genderElem) {
+    resultElem.innerHTML = "Please pick a gender.";
+    return;
+  }
+
+  if (isNaN(heightElem) || heightElem <= 0) {
+    resultElem.innerHTML = "Please enter a valid height.";
+    return;
+  }
+
+  if (isNaN(weightElem) || weightElem <= 0) {
+    resultElem.innerHTML = "Please enter a valid weight.";
+    return;
+  }
+
+  if (isNaN(ageElem) || ageElem <= 0) {
+    resultElem.innerHTML = "Please enter a correct age.";
+    return;
+  } else if (ageElem >= 120) {
+    resultElem.innerHTML = "Age limit is too high. We recommend you rest up.";
+    return;
+  }
+
+  if (isNaN(activityElem) || activityElem <= 0) {
+    resultElem.innerHTML = "Please pick an activity level.";
+    return;
+  }
 
   if (genderElem == "male") {
     BMR = 88.362 + 13.397 * weightElem + 4.799 * heightElem - 5.677 * ageElem;
@@ -134,14 +161,14 @@ function proteinCalculator() {
       maximumProtein = weightElem * 2.5;
       break;
     default:
-      throw new Error("Invalid activity");
+      resultElem.innerHTML = `Please pick an activity level`;
   }
 
-  resultElem.innerHTML = ` Your BMR is ${BMR.toFixed(
+  resultElem.innerHTML = `Calories recommended per day: ${BMR.toFixed(2)}.<br>
+  To maintain your weight (${weightElem}KG), you will need at least ${TDEE.toFixed(
     2
-  )} and TDEE is ${TDEE.toFixed(2)},
-  minimum protein needed is ${minimumProtein}
-  maximum protein needed is ${maximumProtein}`;
+  )} calories per day.<br>
+  The recommended protein you should be taking is ${minimumProtein}G - ${maximumProtein}G.<br>`;
 }
 
 // make the review randomized
