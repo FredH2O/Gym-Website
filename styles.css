@@ -475,6 +475,7 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
   color: var(--primary-color);
 }
+
 .BMI-calculator input {
   width: calc(100% - 20px);
   padding: 10px;
