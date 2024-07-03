@@ -340,7 +340,7 @@ article::before {
 
 .membership:hover {
   transform: translateY(-2%);
-  transition: 0.3s ease-out;
+  transition: 0.6s ease-out;
 }
 
 .membership ul {
@@ -461,11 +461,68 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+/* BMI Calculator */
+
+.BMI-calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+.BMI-calculator h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.BMI-calculator input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.BMI-calculator button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.BMI-calculator button:hover {
+  background: #0056b3;
+}
+.result {
+  margin-top: 20px;
+}
+
 /* protein calculator form style */
 
 .protein-container {
-  padding: 10%;
+  padding: 0 10% 5% 10%;
   margin: auto;
+}
+
+.form-protein.hidden {
+  display: none;
+}
+
+#proteinButton {
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#proteinButton:hover {
+  transform: translateY(-5%);
+  transition: 0.5s ease;
+  background-color: var(--secondary-color-dark);
 }
 
 .form-protein {
@@ -521,7 +578,7 @@ select {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.form-protein button:hover {
   background-color: #45a049;
 }
 
