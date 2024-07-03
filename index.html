@@ -322,7 +322,31 @@
 
       <section>
         <div class="main-container protein-container">
-          <form class="form-protein">
+          <button onclick="hideProtein()" id="proteinButton">
+            Protein Calculator
+          </button>
+          <div class="BMI-calculator">
+            <h2>BMI Calculator</h2>
+            <form id="bmiForm">
+              <input
+                type="number"
+                id="height"
+                placeholder="Height (cm)"
+                required
+              />
+              <input
+                type="number"
+                id="weight"
+                placeholder="Weight (kg)"
+                required
+              />
+              <button type="button" onclick="calculateBMI()">
+                Calculate BMI
+              </button>
+            </form>
+            <p class="result" id="result"></p>
+          </div>
+          <form class="form-protein hidden">
             <h2 class="h2-protein">Protein Calculator</h2>
 
             <label for="gender" class="protein-label">Gender</label>
@@ -442,7 +466,6 @@
         <a href="#">Contact Us</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms & Conditions</a>
-        <a href="#">BMI Calculator</a>
       </div>
     </footer>
     <div class="footer__bar">
