@@ -385,7 +385,7 @@ article::before {
 .form-container {
   display: block;
   max-width: 600px;
-  background-color: var(--primary-color-extra-light);
+  background: #1f2125 0.5;
   padding: 30px;
   margin: 20px auto;
   border-radius: 8px;
@@ -395,6 +395,8 @@ article::before {
   top: 10%;
   right: 40%;
   z-index: 2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 #closeBtn {
@@ -464,35 +466,39 @@ input[type="submit"]:hover {
 /* BMI Calculator */
 
 .BMI-calculator {
-  background: #fff;
+  background-color: var(--primary-color-light);
+  border: 1px solid var(--white);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
 }
+
 .BMI-calculator h2 {
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 .BMI-calculator input {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
 }
+
 .BMI-calculator button {
   padding: 10px 20px;
-  background: #007bff;
+  background: var(--secondary-color-dark);
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
+
 .BMI-calculator button:hover {
-  background: #0056b3;
+  background: var(--secondary-color);
 }
 .result {
   margin-top: 20px;
@@ -569,7 +575,7 @@ select {
   margin: auto;
   margin-top: 0.5rem;
   padding: 0.75rem;
-  background-color: #4caf50;
+  background-color: var(--secondary-color-dark);
   color: white;
   border: none;
   border-radius: 4px;
