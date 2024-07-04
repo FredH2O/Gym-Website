@@ -9,6 +9,42 @@ function closeForm() {
   formContainer.classList.add("hidden");
 }
 
+// form for membership
+
+document
+  .getElementById("membershipForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const phoneNumber = document.getElementById("phone").value;
+    const membership = document.getElementById("membership").value;
+
+    const member = new GymMember(fullName, email, phoneNumber, membership);
+    displayMemberDetails(member);
+  });
+
+class GymMember {
+  constructor(fullName, eMail, phoneNumber, membership) {
+    this.name = fullName;
+    this.email = eMail;
+    this.phone = phoneNumber;
+    this.membership = membership;
+  }
+
+  detailsMember() {
+    return `Name: ${this.name} , ${this.email} , ${this.phone} , ${this.membership}`;
+  }
+}
+
+function displayMemberDetails(member) {
+  const memberDetailsDiv = document.getElementById("memberDetails");
+  memberDetailsDiv.innerHTML = `
+    <h2>MEMBER DETAILS</h2>
+    <p>${member.detailsMember()}</p>`;
+}
+
 // protein calculator
 
 let formProtein = document.querySelector(".form-protein");

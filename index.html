@@ -32,7 +32,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#program">Program</a></li>
             <li><a href="#team">About Us</a></li>
-            <li><a href="#membership">Membership</a></li>
+            <li><a href="#membership" onclick="showForm()">Membership</a></li>
           </ul>
         </nav>
       </div>
@@ -256,7 +256,7 @@
         <div class="form-container hidden">
           <button id="closeBtn" onclick="closeForm()">X</button>
           <h2>Gym Membership Form</h2>
-          <form action="#" method="post">
+          <form id="membershipForm">
             <div class="form-group">
               <label for="fullname">
                 <i class="ri-id-card-line"></i> Full Name:
@@ -316,15 +316,17 @@
             </div>
           </form>
         </div>
+        <div id="memberDetails"></div>
       </section>
 
-      <!-- protein calculator -->
+      <!-- protein calculator & BMI calculator-->
 
       <section>
         <div class="main-container protein-container">
           <button onclick="hideProtein()" id="proteinButton">
             Protein Calculator
           </button>
+          <!-- BMI Calculator -->
           <div class="BMI-calculator">
             <h2>BMI Calculator</h2>
             <form id="bmiForm">
@@ -334,18 +336,21 @@
                 placeholder="Height (cm)"
                 required
               />
+
               <input
                 type="number"
                 id="weight"
                 placeholder="Weight (kg)"
                 required
               />
+
               <button type="button" onclick="calculateBMI()">
                 Calculate BMI
               </button>
             </form>
             <p class="result" id="result"></p>
           </div>
+
           <form class="form-protein hidden">
             <h2 class="h2-protein">Protein Calculator</h2>
 
