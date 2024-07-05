@@ -45,16 +45,38 @@ function displayMemberDetails(member) {
     <p>${member.detailsMember()}</p>`;
 }
 
+// BMI Calculator
+
+let formBMI = document.querySelector(".BMI-calculator");
+let bmiButton = document.getElementById("bmiButton");
+let isOpenBMI = true;
+
+function showBMI() {
+  formBMI.classList.toggle("hidden");
+
+  if (!isOpenBMI) {
+    bmiButton.innerHTML = `BMI Calculator`;
+    bmiButton.style.background = ``;
+    bmiButton.style.color = ``;
+  } else {
+    bmiButton.innerHTML = `Close`;
+    bmiButton.style.background = "rgb(255, 76, 76)";
+    bmiButton.style.color = `white`;
+  }
+
+  isOpenBMI = !isOpenBMI;
+}
+
 // protein calculator
 
 let formProtein = document.querySelector(".form-protein");
 let proteinBtn = document.getElementById("proteinButton");
-let isOpen = false;
+let isOpenProtein = true;
 
 function hideProtein() {
   formProtein.classList.toggle("hidden");
 
-  if (isOpen) {
+  if (!isOpenProtein) {
     proteinBtn.innerHTML = "Protein Calculator";
     proteinBtn.style.backgroundColor = "";
     proteinBtn.style.color = "";
@@ -64,7 +86,7 @@ function hideProtein() {
     proteinBtn.style.color = "white";
   }
 
-  isOpen = !isOpen;
+  isOpenProtein = !isOpenProtein;
 }
 
 function proteinCalculator() {

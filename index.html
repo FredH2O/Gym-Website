@@ -323,11 +323,14 @@
 
       <section>
         <div class="main-container protein-container">
-          <button onclick="hideProtein()" id="proteinButton">
-            Protein Calculator
-          </button>
+          <div class="btn-div">
+            <button onclick="hideProtein()" id="proteinButton">
+              Protein Calculator
+            </button>
+            <button onclick="showBMI()" id="bmiButton">BMI Calculator</button>
+          </div>
           <!-- BMI Calculator -->
-          <div class="BMI-calculator">
+          <div class="BMI-calculator hidden">
             <h2>BMI Calculator</h2>
             <form id="bmiForm">
               <input
