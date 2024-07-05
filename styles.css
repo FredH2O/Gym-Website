@@ -465,14 +465,41 @@ input[type="submit"]:hover {
 
 /* BMI Calculator */
 
+.btn-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#bmiButton {
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#bmiButton:hover {
+  transform: translateY(-5%);
+  transition: 0.5s ease;
+  background-color: var(--secondary-color-dark);
+}
+
+.BMI-calculator.hidden {
+  display: none;
+}
+
 .BMI-calculator {
+  display: block;
   background-color: var(--primary-color-light);
   border: 1px solid var(--white);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 100%;
   text-align: center;
+  margin: 5% auto;
 }
 
 .BMI-calculator h2 {
@@ -495,11 +522,13 @@ input[type="submit"]:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .BMI-calculator button:hover {
   background: var(--secondary-color);
 }
+
 .result {
   margin-top: 20px;
 }
