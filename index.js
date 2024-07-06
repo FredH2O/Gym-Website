@@ -13,7 +13,7 @@ function closeForm() {
 
 document
   .getElementById("membershipForm")
-  .addEventListener("submit", function (event) {
+  .addEventListener("submit", function membership(event) {
     event.preventDefault();
 
     const fullName = document.getElementById("fullname").value;
@@ -50,6 +50,19 @@ function displayMemberDetails(member) {
 let formBMI = document.querySelector(".BMI-calculator");
 let bmiButton = document.getElementById("bmiButton");
 let isOpenBMI = true;
+
+let bmiResult = document.getElementById("bmiResult");
+
+function calculateBMI() {
+  let bmiHeight = parseFloat(document.getElementById("bmiHeight").value);
+  let bmiWeight = parseFloat(document.getElementById("bmiWeight").value);
+
+  let meterHeight = bmiHeight / 100;
+  let heightSquared = meterHeight * meterHeight;
+  let BMI = bmiWeight / heightSquared;
+
+  bmiResult.innerHTML = `Your BMI is ${BMI.toFixed(1)}`;
+}
 
 function showBMI() {
   formBMI.classList.toggle("hidden");
