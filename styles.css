@@ -497,9 +497,10 @@ input[type="submit"]:hover {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 50%;
   text-align: center;
-  margin: 5% auto;
+  margin: 10px;
+  border: 1px solid wheat;
 }
 
 .BMI-calculator h2 {
@@ -535,9 +536,11 @@ input[type="submit"]:hover {
 
 /* protein calculator form style */
 
-.protein-container {
-  padding: 0 10% 5% 10%;
-  margin: auto;
+.proteinAndBmi-container {
+  padding: 10px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
 }
 
 .form-protein.hidden {
@@ -566,6 +569,10 @@ input[type="submit"]:hover {
   max-width: var(--max-width);
   background-color: var(--primary-color-light);
   border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+  margin: 5% auto;
+  border: 1px solid wheat;
 }
 
 .h2-protein {
@@ -585,7 +592,7 @@ input[type="submit"]:hover {
 
 .form-protein input,
 .form-protein select {
-  width: 90%;
+  width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -595,12 +602,13 @@ input[type="submit"]:hover {
 }
 
 select {
-  width: 90%;
+  width: 100%;
   background-color: var(--white);
 }
 
 .form-protein button {
-  width: 90%;
+  width: 50%;
+  display: block;
   margin: auto;
   margin-top: 0.5rem;
   padding: 0.75rem;
@@ -858,6 +866,21 @@ select {
     text-align: center;
   }
 
+  .proteinAndBmi-container {
+    padding: 0 10% 5% 10%;
+    margin: auto;
+    display: block;
+  }
+
+  .BMI-calculator {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .form-protein {
+    width: 100%;
+  }
+
   .form-container {
     display: absolute;
     width: 100%;
@@ -902,6 +925,31 @@ select {
     top: 46%;
     left: 4%;
   }
+
+  .footer__col {
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .footer__socials {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  .footer__logo {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer__bar {
+    text-align: center;
+  }
 }
 
 /* Tablet devices (max-width: 992px) */
@@ -942,6 +990,21 @@ select {
 
   .modern-div {
     grid-template-columns: 1fr;
+  }
+
+  .proteinAndBmi-container {
+    padding: 0 10% 5% 10%;
+    margin: auto;
+    display: block;
+  }
+
+  .BMI-calculator {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .form-protein {
+    width: 100%;
   }
 
   .footer__container {
