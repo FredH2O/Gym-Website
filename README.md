@@ -67,6 +67,7 @@ Welcome to the Gym-Website project! This repository contains the code for a simp
 - **JavaScript**
 - **Bootstrap** Icons
 - **Google FONTS**
+- **CopyPasta Tech🤣** lol
 
 ## Installation
 
@@ -112,7 +113,7 @@ Contributions are welcome! Please follow these steps to contribute:
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details. https://en.wikipedia.org/wiki/MIT_License (What is MIT?)
 
 ## Contact
 
