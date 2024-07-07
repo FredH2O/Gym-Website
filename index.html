@@ -74,8 +74,6 @@
               <span class="circle-abstract"></span>
               <span class="circle-abstract"></span>
               <span class="circle-abstract"></span>
-              <span class="circle-abstract"></span>
-              <span class="circle-abstract"></span>
             </div>
           </div>
         </div>
@@ -253,70 +251,72 @@
       <!-- membership form -->
 
       <section class="main-container">
-        <div class="form-container hidden">
-          <button id="closeBtn" onclick="closeForm()">X</button>
-          <h2>Gym Membership Form</h2>
-          <form id="membershipForm">
-            <div class="form-group">
-              <label for="fullname">
-                <i class="ri-id-card-line"></i> Full Name:
-              </label>
-              <input type="text" id="fullname" name="fullname" required />
-            </div>
-            <div class="form-group">
-              <label for="email"> <i class="ri-mail-line"></i> Email: </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                placeholder="gym-member@yahoo.ie"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="phone">
-                <i class="ri-smartphone-line"></i>Phone Number:
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                pattern="^\+353\d{2}\d{3}\d{4}$"
-                placeholder="Format: +353864567890"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="membership">
-                <i class="ri-calendar-schedule-line"></i> Membership Plan:
-              </label>
-              <select id="membership" name="membership" required>
-                <option value=""></option>
-                <option value="trial">Free 1 Day Trial</option>
-                <option value="bronze">Bronze</option>
-                <option value="silver">Silver</option>
-                <option value="gold">Gold</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">
-                <i class="ri-chat-1-line"></i> Additional Message:
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                minlength="10"
-                maxlength="200"
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
+        <div class="test">
+          <div class="form-container hidden">
+            <button id="closeBtn" onclick="closeForm()">X</button>
+            <h2>Gym Membership Form</h2>
+            <form id="membershipForm">
+              <div class="form-group">
+                <label for="fullname">
+                  <i class="ri-id-card-line"></i> Full Name:
+                </label>
+                <input type="text" id="fullname" name="fullname" required />
+              </div>
+              <div class="form-group">
+                <label for="email"> <i class="ri-mail-line"></i> Email: </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  placeholder="gym-member@yahoo.ie"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">
+                  <i class="ri-smartphone-line"></i>Phone Number:
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="^\+353\d{2}\d{3}\d{4}$"
+                  placeholder="Format: +353864567890"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="membership">
+                  <i class="ri-calendar-schedule-line"></i> Membership Plan:
+                </label>
+                <select id="membership" name="membership" required>
+                  <option value=""></option>
+                  <option value="trial">Free 1 Day Trial</option>
+                  <option value="bronze">Bronze</option>
+                  <option value="silver">Silver</option>
+                  <option value="gold">Gold</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">
+                  <i class="ri-chat-1-line"></i> Additional Message:
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  minlength="10"
+                  maxlength="200"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+          <div class="memberDetails hidden"></div>
         </div>
-        <div id="memberDetails"></div>
       </section>
 
       <!-- protein calculator & BMI calculator-->

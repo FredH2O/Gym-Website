@@ -1,6 +1,7 @@
 // open form and close form
 
 let formContainer = document.querySelector(".form-container");
+
 function showForm() {
   formContainer.classList.toggle("hidden");
 }
@@ -23,6 +24,14 @@ document
 
     const member = new GymMember(fullName, email, phoneNumber, membership);
     displayMemberDetails(member);
+
+    closeForm();
+    let memberDetails = document.querySelector(".memberDetails");
+    memberDetails.classList.toggle("hidden");
+
+    setTimeout(() => {
+      memberDetails.classList.toggle("hidden");
+    }, 3000);
   });
 
 class GymMember {
@@ -34,15 +43,16 @@ class GymMember {
   }
 
   detailsMember() {
-    return `Name: ${this.name} , ${this.email} , ${this.phone} , ${this.membership}`;
+    return `Welcome ${this.name} , ${this.email} , ${this.phone} , ${this.membership}`;
   }
 }
 
 function displayMemberDetails(member) {
-  const memberDetailsDiv = document.getElementById("memberDetails");
+  const memberDetailsDiv = document.querySelector(".memberDetails");
   memberDetailsDiv.innerHTML = `
     <h2>MEMBER DETAILS</h2>
-    <p>${member.detailsMember()}</p>`;
+    <p>${member.detailsMember()}</p>
+    `;
 }
 
 // BMI Calculator
@@ -72,7 +82,7 @@ function showBMI() {
     bmiButton.style.background = ``;
     bmiButton.style.color = ``;
   } else {
-    bmiButton.innerHTML = `Close`;
+    bmiButton.innerHTML = `CLOSE`;
     bmiButton.style.background = "rgb(255, 76, 76)";
     bmiButton.style.color = `white`;
   }
