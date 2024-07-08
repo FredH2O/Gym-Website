@@ -16,22 +16,26 @@ document
   .getElementById("membershipForm")
   .addEventListener("submit", function membership(event) {
     event.preventDefault();
-
     const fullName = document.getElementById("fullname").value;
     const email = document.getElementById("email").value;
     const phoneNumber = document.getElementById("phone").value;
     const membership = document.getElementById("membership").value;
 
+    if (!membership) {
+      console.error("Membership is undefined or empty!");
+      return; // Exit the function if membership is not selected
+    }
+
     const member = new GymMember(fullName, email, phoneNumber, membership);
     displayMemberDetails(member);
 
     closeForm();
+
     let memberDetails = document.querySelector(".memberDetails");
     memberDetails.classList.toggle("hidden");
-
     setTimeout(() => {
       memberDetails.classList.toggle("hidden");
-    }, 9000);
+    }, 10000);
   });
 
 class GymMember {
@@ -53,17 +57,29 @@ class GymMember {
     return phoneSplit;
   }
 
+  shortenedName(name) {
+    let shortName = name.split(" ");
+    return shortName[0];
+  }
+
   detailsMember() {
     let hideEmail = this.hiddenEmail(this.email);
     let hidePhone = this.hiddenPhone(this.phone);
-    return `Welcome ${this.name} , ${hideEmail} , ${hidePhone} , ${this.membership}`;
+    return `<br>We have sent a verification email at ${hideEmail}! <br>
+    We have saved your Contact Number ${hidePhone} for future reference! <br>
+    A staff member will be in touch with you shortly about your membership plan ${this.membership}.<br>
+    Thank you and see you soon! 
+    <br>
+    <br>
+    Regards,<br>
+    Dublin Gym Team.`;
   }
 }
 
 function displayMemberDetails(member) {
   const memberDetailsDiv = document.querySelector(".memberDetails");
   memberDetailsDiv.innerHTML = `
-    <h2>MEMBER DETAILS</h2>
+    <h2>Welcome ${member.shortenedName(member.name)} !</h2>
     <p>${member.detailsMember()}</p>
     `;
 }
