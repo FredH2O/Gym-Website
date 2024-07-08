@@ -31,7 +31,7 @@ document
 
     setTimeout(() => {
       memberDetails.classList.toggle("hidden");
-    }, 3000);
+    }, 9000);
   });
 
 class GymMember {
@@ -42,8 +42,21 @@ class GymMember {
     this.membership = membership;
   }
 
+  hiddenEmail(email) {
+    let [userEmail, website] = email.split("@");
+    let maskEmail = userEmail.slice(0, 2) + "*****" + userEmail.slice(-2);
+    return `${maskEmail}@${website}`;
+  }
+
+  hiddenPhone(phone) {
+    let phoneSplit = phone.slice(0, 6) + "****" + phone.slice(-3);
+    return phoneSplit;
+  }
+
   detailsMember() {
-    return `Welcome ${this.name} , ${this.email} , ${this.phone} , ${this.membership}`;
+    let hideEmail = this.hiddenEmail(this.email);
+    let hidePhone = this.hiddenPhone(this.phone);
+    return `Welcome ${this.name} , ${hideEmail} , ${hidePhone} , ${this.membership}`;
   }
 }
 
@@ -71,7 +84,14 @@ function calculateBMI() {
   let heightSquared = meterHeight * meterHeight;
   let BMI = bmiWeight / heightSquared;
 
-  bmiResult.innerHTML = `Your BMI is ${BMI.toFixed(1)}`;
+  bmiResult.innerHTML = `Your BMI is ${BMI.toFixed(1)}.<br>
+  The recommended BMI categories for adults are as follows:
+  <ul>
+  <li> Underweight: BMI less than 18.5</li>
+  <li> Normal weight: BMI 18.5 - 24.9</li>
+  <li> Overweight: BMI 25 - 29.9</li>
+  <li> Obesity: BMI 30 or higher</li>
+  </ul>`;
 }
 
 function showBMI() {
@@ -183,6 +203,7 @@ function proteinCalculator() {
       break;
     default:
       resultElem.innerHTML = `Please pick an activity level`;
+      return;
   }
 
   resultElem.innerHTML = `Calories recommended per day: ${BMR.toFixed(2)}.<br>
