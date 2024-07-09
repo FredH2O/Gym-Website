@@ -297,6 +297,12 @@ article::before {
   gap: 5px;
   height: auto;
   width: 100%;
+  padding: 10% 0 10% 0;
+}
+
+.modern-paragraph {
+  text-align: center;
+  padding: 10px;
 }
 
 /* membership styling */
@@ -392,6 +398,7 @@ article::before {
   background: #1f2125 0.5;
   padding: 15px;
   margin: auto;
+  width: 90%;
   height: fit-content;
   border-radius: 10px;
   box-shadow: 0 0 10px var(--secondary-color);
@@ -404,7 +411,6 @@ article::before {
   z-index: 2;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 5px solid red;
 }
 
 .memberDetails.hidden {
@@ -438,7 +444,7 @@ article::before {
   position: fixed;
   top: 10%;
   right: 40%;
-  z-index: 2;
+  z-index: 1;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
