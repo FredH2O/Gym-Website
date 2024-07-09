@@ -12,6 +12,8 @@ function closeForm() {
 
 // form for membership
 
+const memberDetailsDiv = document.querySelector(".memberDetails");
+
 document
   .getElementById("membershipForm")
   .addEventListener("submit", function membership(event) {
@@ -21,9 +23,8 @@ document
     const phoneNumber = document.getElementById("phone").value;
     const membership = document.getElementById("membership").value;
 
-    if (!membership) {
-      console.error("Membership is undefined or empty!");
-      return; // Exit the function if membership is not selected
+    if (email.includes("@") == false || email.includes(".") == false) {
+      memberDetailsDiv.innerHTML = `Please enter a valid email.`;
     }
 
     const member = new GymMember(fullName, email, phoneNumber, membership);
@@ -65,7 +66,9 @@ class GymMember {
   detailsMember() {
     let hideEmail = this.hiddenEmail(this.email);
     let hidePhone = this.hiddenPhone(this.phone);
-    return `<br>We have sent a verification email at ${hideEmail}! <br>
+    return `
+    <br>
+    We have sent a verification email at ${hideEmail}! <br>
     We have saved your Contact Number ${hidePhone} for future reference! <br>
     A staff member will be in touch with you shortly about your membership plan ${this.membership}.<br>
     Thank you and see you soon! 
@@ -77,7 +80,6 @@ class GymMember {
 }
 
 function displayMemberDetails(member) {
-  const memberDetailsDiv = document.querySelector(".memberDetails");
   memberDetailsDiv.innerHTML = `
     <h2>Welcome ${member.shortenedName(member.name)} !</h2>
     <p>${member.detailsMember()}</p>
