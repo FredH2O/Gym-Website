@@ -853,8 +853,8 @@ select {
 }
 
 /* -------------------------------------------- */
-/* responsive design */
-@media (max-width: 425px) {
+/* responsive design mobile */
+@media (max-width: 450px) {
   h2 {
     font-size: 2.2rem;
     text-align: center;
