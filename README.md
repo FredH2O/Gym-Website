@@ -67,7 +67,6 @@ Welcome to the Gym-Website project! This repository contains the code for a simp
 - **JavaScript**
 - **Bootstrap** Icons
 - **Google FONTS**
-- **CopyPasta Tech🤣** lol
 
 ## Installation
 
